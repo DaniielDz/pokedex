@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+.pokemon{
+    margin-top: 50px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    /* align-items: center; */
+}
+.pokemon--active { display: flex; }
+.id, .nombre, .imagen { margin: 0; }
+
+.imagen {
+    width: 200px;
+    height: 200px;
+}
+button {
+    width: fit-content;
+}
