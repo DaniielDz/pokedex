@@ -11,16 +11,19 @@ button.addEventListener('click', e => {
     e.preventDefault();
 
     // Buscar Pokemon
-    buscar(userInput.value)
-    contenedor.classList.add('pokemon--active')
+    buscar(userInput.value.toLowerCase());
 })
 
 function buscar(input) {
     fetch(`https://pokeapi.co/api/v2/pokemon/${input}`)
-    .then(res => res.json())
-    .then(data => {
-        mostrar(data)
-    })
+        .then(res => res.json())
+        .then(data => {
+            mostrar(data);
+            contenedor.classList.add('pokemon--active');
+        })
+        .catch(error => {
+           alert('El nombre o el id no pertenece a ningun pokemon')
+        })
 
 }
 function mostrar(data) {
@@ -38,7 +41,7 @@ const cambiarVersion = (data) => {
     const nuevoSrc = shiny  // Determinar la nueva fuente de la imagen basándose en si es shiny o no
         ? data.sprites.other['official-artwork'].front_shiny    
         : data.sprites.other['official-artwork'].front_default; 
-
+    console.log(nuevoSrc)
     imagenPokemon.setAttribute('src', nuevoSrc);    // Establecer la nueva fuente de la imagen
     versionBtn.textContent = shiny ? 'Normal' : 'Shiny';    // Actualizar el texto del botón
 };
