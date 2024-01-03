@@ -8,17 +8,19 @@
 </head>
 <body>
     <form action="" class="form">
-        <label for="buscador">Ingrese el nombre del Pokemon o su numero de Pokedex</label>
-        <input class="userInput" id="buscador" type="text">
-        <button class="button">BUSCAR POKEMON</button>
+        <input class="userInput borderNone" id="buscador" type="text">
+        <button class="button borderNone"><i class="fa-solid fa-magnifying-glass"></i></button>
     </form>
     <div class="pokemon">
         <img class="imagen" src="" alt="">
-        <p class="id"></p>
-        <p class="nombre"></p>
+        <div class="pokemon-data">
+            <p class="id"></p>
+            <p class="nombre"></p>
+        </div>
         <button class="version">Shiny</button>
     </div>
 
     <script src="main.js"></script>
+    <script src="https://kit.fontawesome.com/56bf21513d.js" crossorigin="anonymous"></script>
 </body>
 </html>

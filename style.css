@@ -1,22 +1,61 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
 body {
+    height: 80vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form {
+    border-radius: 2rem;
+    border: 2px solid #f44336;
+}
+.borderNone {
+    border: none;
+    outline: none;
+}
+.userInput{
+    font-size: 2rem;
+    border-radius: 2rem;
+    padding: 1rem 2rem;
+}
+.button {
+    padding-right: 2rem;
+    font-size: 2rem;
+    background-color: transparent;
+    cursor: pointer;
 }
 .pokemon{
     margin-top: 50px;
     display: none;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     gap: 20px;
-    /* align-items: center; */
+    align-items: center;
 }
 .pokemon--active { display: flex; }
-.id, .nombre, .imagen { margin: 0; }
+.id, .nombre, .imagen { 
+    font-size: 3rem;
+    margin: 0;
+}
 
 .imagen {
-    width: 200px;
-    height: 200px;
+    width: 50rem;
+    height: 50rem;
 }
 button {
     width: fit-content;
+    font-size: 3rem;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    background-color: #ffc72b;
+    cursor: pointer;
 }

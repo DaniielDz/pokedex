@@ -27,8 +27,10 @@ function buscar(input) {
 
 }
 function mostrar(data) {
+    let pokemonName = data['name'];
     idPokemon.textContent = `ID: ${data['id']}`
-    nombrePokemon.textContent = `Nombre: ${data['name']}`
+    let name = pokemonName.charAt(0).toUpperCase() + pokemonName.slice(1);
+    nombrePokemon.textContent = `Nombre: ${name}`
     imagenPokemon.setAttribute('src', data.sprites.other['official-artwork'].front_default)
     imagenPokemon.setAttribute('alt', `${data['name']} image`)
 
